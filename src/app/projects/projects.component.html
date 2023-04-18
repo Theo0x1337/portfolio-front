@@ -1,0 +1,15 @@
+<div>
+    <h1 class="!font-kusei !font-bold !text-3xl !font-serif">Projects</h1>
+    <div class="grid grid-cols-4 gap-4">
+        <mat-card class="shadow-xl xl:h-20 2xl:h-28" *ngFor="let project of projects">
+            <mat-card-header>
+                <mat-card-title>{{project.name}}</mat-card-title>
+                <mat-card-subtitle>{{project.description}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-footer>
+                <hr>
+                <p>Stack</p>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</div>

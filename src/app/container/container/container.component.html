@@ -1,0 +1,17 @@
+<div class="w-full h-full flex">
+    <div class="w-1/4 mt-auto mb-auto flex">
+        <ul class="ml-auto mr-auto text-lg">
+            <li class="cursor-pointer" *ngFor="let menuItem of menuList" (click)="changeColor(menuItem)"
+                [ngClass]="{'selected': menuItem.isSelected}">
+                <strong>{{menuItem.name}}</strong>
+            </li>
+        </ul>
+    </div>
+    <div  [ngSwitch]="route" class="w-3/4 overflow-y-scroll scrollbar-hide">
+        <div *ngSwitchCase="'Home'"><app-home></app-home></div>
+        <div *ngSwitchCase="'About'"><app-about></app-about></div>
+        <div *ngSwitchCase="'Stack'"><app-stack></app-stack></div>
+        <div *ngSwitchCase="'Projects'"><app-projects></app-projects></div>
+        <div *ngSwitchCase="'Vouch'">Vouch</div>
+    </div>
+</div>
