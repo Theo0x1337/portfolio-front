@@ -11,6 +11,10 @@ import { StackComponent } from './stack/stack.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { VouchComponent } from './vouch/vouch.component';
 import { MatCardModule } from "@angular/material/card";
+import { MatButtonModule } from '@angular/material/button'
+import { HttpClientModule } from '@angular/common/http';
+import { VouchService } from './vouch/vouch.service';
+
 
 @NgModule({
   declarations: [
@@ -26,9 +30,11 @@ import { MatCardModule } from "@angular/material/card";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [VouchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

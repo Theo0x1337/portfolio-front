@@ -22,11 +22,7 @@ export class ContainerComponent implements OnInit{
     {
       name: 'Stack',
       isSelected: false
-    },
-    {
-      name: 'Projects',
-      isSelected: false
-    },
+    }, 
     {
       name: 'Vouch',
       isSelected: false

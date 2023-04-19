@@ -1,4 +1,5 @@
 .selected{
     color: #c026d3;
-    text-decoration: underline;
+    border-left: 1px solid #c026d3;
+    border-right: 1px solid #c026d3;
 }
