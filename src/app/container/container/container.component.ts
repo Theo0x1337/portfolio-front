@@ -12,11 +12,11 @@ export class ContainerComponent implements OnInit{
 
   menuList = [
     {
-      name: 'Home',
+      name: 'Accueil',
       isSelected: true
     },
     {
-      name: 'About',
+      name: 'A propos',
       isSelected: false
     },
     {
@@ -24,13 +24,13 @@ export class ContainerComponent implements OnInit{
       isSelected: false
     }, 
     {
-      name: 'Vouch',
+      name: 'Avis',
       isSelected: false
     }
 ];
 
   constructor(){
-    this.route = 'Home';
+    this.route = 'Accueil';
   }
 
   ngOnInit() {

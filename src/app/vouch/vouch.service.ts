@@ -12,4 +12,8 @@ export class VouchService {
   public getVouch(): Observable<Vouch[]> {
     return this.http.get<Vouch[]>(`${this.apiServerUrl}/vouch/all`);
   }
+
+  public addVouch(vouch: Vouch): Observable<Vouch> {
+    return this.http.post<Vouch>(`${this.apiServerUrl}/vouch/add`, vouch);
+  }
 }
