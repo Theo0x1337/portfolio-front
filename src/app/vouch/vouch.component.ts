@@ -28,7 +28,7 @@ export class VouchComponent implements OnInit{
       button.textContent = "Fermer le formulaire"
     } else {
       form.style.display = "none";
-      button.textContent = "Laissez moi un avis !"
+      button.textContent = "Ecrire un avis"
     }
   }
   
@@ -36,7 +36,6 @@ export class VouchComponent implements OnInit{
     this.vouchService.getVouch().subscribe(
       (response: Vouch[]) => {
         this.vouchs = response;
-        console.log(this.vouchs);
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -50,7 +49,6 @@ export class VouchComponent implements OnInit{
     addForm.form.value.dateReview = new Date().getTime();
     this.vouchService.addVouch(addForm.value).subscribe(
       (response: Vouch) => {
-        console.log(response);
         this.getVouch();
         addForm.reset();
       },

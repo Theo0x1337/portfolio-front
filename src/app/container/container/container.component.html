@@ -2,7 +2,7 @@
     <div class="md:w-1/4 flex text-center mb-8">
         <div class="mx-auto my-auto">
             <img class="lg:h-64 lg:w-64 h-48 w-48 mx-auto" src="../../../assets/logo.png"/>
-            <ul class="ml-0 mr-0 md:ml-auto md:mr-auto text-lg w-2/4">
+            <ul class="ml-0 mr-0 ml-auto mr-auto text-lg w-full sm:2/4">
                 <li class="cursor-pointer inline md:block mx-1 md:m-0" *ngFor="let menuItem of menuList" (click)="changeColor(menuItem)"
                     [ngClass]="{'selected': menuItem.isSelected}">
                     <strong>{{menuItem.name}}</strong>
