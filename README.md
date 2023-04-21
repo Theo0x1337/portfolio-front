@@ -35,3 +35,8 @@ Le composant dynamique est en faites un des 4 composants suivants:
 * Avis
 
 qui est affiché de manière conditionnel en fonction du choix de l'utilisateur dans le menu.
+
+## Suggestions
+
+Si vous avez des suggestions qui me permettraient d'améliorer cette page, n'hésitez pas à ouvrir une issue et à la décrire !  
+De même si vous trouvez un bug !
