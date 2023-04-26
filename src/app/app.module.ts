@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { KonamiModule } from 'ngx-konami';
+import { Globals } from './globals';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,9 +41,10 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MatIconModule,
     FormsModule,
-    KonamiModule
+    KonamiModule,
+
   ],
-  providers: [VouchService],
+  providers: [VouchService, Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

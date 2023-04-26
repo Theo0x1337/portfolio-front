@@ -3,6 +3,7 @@ import { Vouch } from './vouch';
 import { VouchService } from './vouch.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-vouch',
@@ -50,6 +51,18 @@ export class VouchComponent implements OnInit{
     this.vouchService.addVouch(addForm.value).subscribe(
       (response: Vouch) => {
         this.getVouch();
+        Swal.fire(
+          'Votre avis à été soumis !',
+          'Merci !',
+          'success'
+        )
+        Swal.fire({
+          title: 'Votre avis à été soumis !',
+          text: "Merci !",
+          icon: 'success',
+          confirmButtonColor: '#c026d3',
+          confirmButtonText: 'Ok'
+        })
         addForm.reset();
       },
       (error: HttpErrorResponse) => {
