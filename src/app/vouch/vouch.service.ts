@@ -5,7 +5,7 @@ import { Vouch } from './vouch';
 
 @Injectable({ providedIn: 'root' })
 export class VouchService {
-  private apiServerUrl = "http://3.70.232.79:5000";
+  private apiServerUrl = "http://ec2-35-180-116-202.eu-west-3.compute.amazonaws.com:8080";
 
   constructor(private http: HttpClient) { }
 
